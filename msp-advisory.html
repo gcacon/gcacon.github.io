@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Windows 10 End of Support: Your Options Explained | GCA Technologies</title>
+<meta name="description" content="Independent, remote advisory on Windows 10 end-of-support: extended updates, new hardware, or migrating to Linux and open source software. Honest, vendor-neutral guidance for small businesses and nonprofits, plus help vetting IT provider contracts before you sign.">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d0f;
+    --bg-alt: #16161a;
+    --text: #e7e7ea;
+    --muted: #9a9aa2;
+    --accent: #2ecc71;
+    --accent-dark: #25a25c;
+    --accent-light: #e2a82b;
+    --accent-faded: #372d1c;
+    --number-color: #372d1c;
+    --border: #26262c;
+    --font: 'General Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); padding: 1.1rem 0; }
+  .nav-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+  .nav-logo { font-family: var(--font); font-weight: 700; font-size: 1rem; letter-spacing: -0.01em; color: var(--text); text-decoration: none; }
+  .nav-logo:hover { text-decoration: none; color: var(--text); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--text); }
+
+  main { display: block; }
+  .section-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+
+  /* HERO */
+  .hero-block { background: var(--bg); }
+  .hero { padding-top: 5.5rem; padding-bottom: 3rem; max-width: 1080px; }
+  .hero-eyebrow { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
+  .hero h1 { font-family: var(--font); font-weight: 700; font-size: 2.5rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin-bottom: 1.5rem; }
+  .hero p { font-size: 1.05rem; color: var(--muted); line-height: 1.75; margin-bottom: 2rem; }
+  .hero-actions { display: flex; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary, .btn-secondary { font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; display: inline-block; border: none; cursor: pointer; }
+  .btn-primary { background: var(--accent); color: #0d0d0f; }
+  .btn-primary:hover { background: var(--accent-dark); text-decoration: none; }
+  .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--muted); text-decoration: none; }
+
+  /* STAT STRIP */
+  .stat-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-alt); }
+  .stat-strip-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stat-cell { padding: 1.75rem 1.5rem 1.75rem 0; border-right: 1px solid var(--border); }
+  .stat-cell:last-child { border-right: none; padding-left: 1.5rem; }
+  .stat-cell:not(:first-child) { padding-left: 1.5rem; }
+  .stat-num { font-family: var(--font); font-weight: 700; font-size: 1.8rem; color: var(--accent-light); margin-bottom: 0.35rem; }
+  .stat-label { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+
+  /* SECTIONS */
+  section { padding: 3.5rem 0; border-top: 1px solid var(--border); background: var(--bg); }
+  section.alt { background: var(--bg-alt); }
+  .section-label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.9rem; }
+  section h2 { font-family: var(--font); font-weight: 700; font-size: 1.6rem; letter-spacing: -0.01em; color: var(--text); margin-bottom: 1.1rem; }
+  .section-intro { font-size: 1rem; color: var(--muted); line-height: 1.8; max-width: 680px; margin-bottom: 2rem; }
+  section p { font-size: 1rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.1rem; }
+  section p strong { color: var(--text); font-weight: 600; }
+  section a.inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+  section a.inline-link:hover { text-decoration-color: var(--accent); }
+
+  /* FIT-TAG GRIDS (options / honest-take / red-flag comparisons) */
+  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .fit-cell { background: var(--bg-alt); padding: 1.75rem; }
+  section.alt .fit-cell { background: var(--bg); }
+  .fit-cell.full-width { grid-column: 1 / -1; }
+  .fit-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.28rem 0.6rem; border-radius: 3px; margin-bottom: 0.85rem; }
+  .tag-yes { background: rgba(46, 204, 113, 0.15); color: var(--accent); }
+  .tag-maybe { background: rgba(226, 168, 43, 0.15); color: #e2a82b; }
+  .tag-no { background: rgba(226, 102, 43, 0.15); color: #e2662b; }
+  .tag-windows { background: rgba(91, 155, 213, 0.15); color: #5b9bd5; }
+  .tag-neutral { background: rgba(154, 154, 162, 0.15); color: var(--muted); }
+  .fit-cell h3 { font-family: var(--font); font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.6rem; line-height: 1.35; }
+  .fit-cell p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 0; }
+  .fit-cell ul { list-style: none; }
+  .fit-cell ul li { font-size: 0.9rem; color: var(--muted); line-height: 1.7; padding-left: 1.1rem; position: relative; }
+  .fit-cell ul li::before { content: "—"; position: absolute; left: 0; color: var(--accent-faded); }
+
+  /* VALUES */
+  .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .values-card { background: var(--bg-alt); padding: 2rem; }
+  section.alt .values-card { background: var(--bg); }
+  .values-card.featured { background: var(--accent); }
+  .values-card.featured h3, .values-card.featured p { color: #0d0d0f; }
+  .values-icon { font-size: 1.75rem; display: block; margin-bottom: 0.85rem; }
+  .values-card h3 { font-family: var(--font); font-size: 1.25rem; color: var(--text); margin-bottom: 0.65rem; }
+  .values-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.75; margin-bottom: 0; }
+  .values-card p + p { margin-top: 0.75rem; }
+
+  /* SERVICES / PRICING */
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .service-card { background: var(--bg-alt); padding: 1.75rem; display: flex; flex-direction: column; }
+  section.alt .service-card { background: var(--bg); }
+  .service-card.featured { background: var(--accent); }
+  .service-card.featured h3, .service-card.featured p, .service-card.featured .price-note { color: #0d0d0f; }
+  .service-card.featured .service-num { color: rgba(13,13,15,0.5); }
+  .service-num { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-light); margin-bottom: 1.1rem; }
+  .service-card h3 { font-family: var(--font); font-size: 1.15rem; color: var(--text); margin-bottom: 0.65rem; }
+  .service-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.1rem; }
+  .price-note { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); border-top: 1px solid var(--border); padding-top: 0.9rem; margin-top: auto; }
+  .service-card.featured .price-note { border-color: rgba(13,13,15,0.2); }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; }
+  .step { display: grid; grid-template-columns: 56px 1fr; gap: 1.25rem; padding: 1.75rem 0; border-top: 1px solid var(--border); }
+  .step:first-child { border-top: none; padding-top: 0; }
+  .step-num { font-family: var(--font); font-weight: 700; font-size: 2rem; color: var(--accent-faded); }
+  .step h3 { font-family: var(--font); font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+  .step p { font-size: 0.92rem; color: var(--muted); line-height: 1.75; margin-bottom: 0; }
+  .step-note { display: inline-block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-top: 0.5rem; }
+
+  /* CONTACT */
+  .cta { padding: 4rem 0; border-top: 1px solid var(--border); }
+  .cta h2 { font-size: 1.9rem; margin-bottom: 1rem; }
+  .cta p { max-width: 560px; margin-bottom: 1.75rem; }
+  .contact-detail { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text); padding: 0.6rem 0; border-top: 1px solid var(--border); max-width: 560px; }
+  .contact-detail:last-of-type { border-bottom: 1px solid var(--border); margin-bottom: 1.75rem; }
+  .contact-detail span { color: var(--muted); margin-right: 0.75rem; display: inline-block; min-width: 110px; }
+  .cta form { max-width: 560px; display: flex; flex-direction: column; gap: 1rem; }
+  .cta form input, .cta form textarea, .cta form select {
+    width: 100%; padding: 0.75rem 1rem; background: var(--bg); border: 1px solid var(--border); border-radius: 4px;
+    font-family: var(--font); font-size: 0.95rem; color: var(--text); outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+  }
+  section.alt .cta form input, section.alt .cta form textarea, section.alt .cta form select { background: var(--bg-alt); }
+  .cta form input:focus, .cta form textarea:focus, .cta form select:focus { border-color: var(--accent); }
+  .cta form textarea { resize: vertical; min-height: 110px; }
+  .cta form ::placeholder { color: var(--muted); }
+  .cta form select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9aa2' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; cursor: pointer;
+  }
+  .cta form button { align-self: flex-start; font-family: var(--font-mono); border: none; cursor: pointer; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 2rem 0; }
+  .footer-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+  .footer-links a:hover { color: var(--text); }
+  footer .copyright { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+
+  @media (max-width: 720px) {
+    nav { padding: 1rem 0; }
+    .nav-inner { padding: 0 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .section-inner { padding: 0 1.25rem; }
+    .stat-strip-inner { grid-template-columns: 1fr; padding: 0 1.25rem; }
+    .stat-cell { border-right: none; border-bottom: 1px solid var(--border); padding: 1.25rem 0 !important; }
+    .stat-cell:last-child { border-bottom: none; }
+    .hero { padding-top: 3.5rem; padding-bottom: 2.5rem; }
+    .hero h1 { font-size: 2rem; }
+    .fit-grid, .values-grid, .services-grid { grid-template-columns: 1fr; }
+    footer { padding: 1.5rem 0; }
+    .footer-inner { padding: 0 1.25rem; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.png"></a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#articles">Articles</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero-block">
+    <div class="section-inner hero">
+      <p class="hero-eyebrow">Advisory · Windows 10 End of Support &amp; Open Source Migration</p>
+      <h1>Windows 10 support has ended. Before you spend or sign anything, get an independent second opinion.</h1>
+      <p>You've got more options than "buy new hardware" or "hire the first IT provider that calls you." We help small businesses and nonprofits — anywhere, entirely remote — think through the real choices: staying on Windows, moving some workloads to Linux and open source software, or bringing in outside help without getting locked into a bad contract. No hands-on, on-site work — just a straight, vendor-neutral read on your situation.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book a Free Intro Call</a>
+        <a href="#options" class="btn-secondary">See your options</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STAT STRIP -->
+  <div class="stat-strip">
+    <div class="stat-strip-inner">
+      <div class="stat-cell">
+        <div class="stat-num">Oct '25</div>
+        <div class="stat-label">Microsoft stopped issuing free security patches for Windows 10 — that deadline has already passed</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">$0</div>
+        <div class="stat-label">licensing cost for Linux and most open source alternatives to everyday business software</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3 paths</div>
+        <div class="stat-label">forward that don't involve immediately replacing every machine in your office</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTIONS OVERVIEW -->
+  <section id="options">
+    <div class="section-inner">
+    <p class="section-label">Start here</p>
+    <h2>Windows 10 is past end-of-support. Here's what that actually means for your options.</h2>
+    <p class="section-intro">"End of support" doesn't mean your computers stop working. It means Microsoft has stopped patching security holes in Windows 10, which means every month that passes without a plan is a month of accumulating risk. You have real choices — this is a plain-language rundown of each one, including the honest downsides.</p>
+
+    <div class="fit-grid">
+      <div class="fit-cell">
+        <span class="fit-tag tag-no">Higher risk</span>
+        <h3>Do nothing, stay on Windows 10</h3>
+        <p>Your machines keep running, but any newly discovered security flaw in Windows 10 stays unpatched permanently. Over time this raises real exposure — to malware, to compliance requirements in regulated industries, and potentially to cyber-insurance claims being denied if an incident is traced to unsupported software.</p>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-maybe">Bridge option</span>
+        <h3>Pay for Extended Security Updates</h3>
+        <p>Microsoft sells a temporary bridge: continued critical security patches for Windows 10 for a fee, for a limited number of years, with pricing that increases each year you renew. It buys time — it doesn't solve the underlying problem, and it doesn't include bug fixes, new features, or general support.</p>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-windows">Conventional path</span>
+        <h3>Upgrade to Windows 11, on new hardware if needed</h3>
+        <p>If your current machines meet Windows 11's hardware requirements (notably a TPM 2.0 security chip), the upgrade itself is typically free. If they don't, this path means new hardware. It's the path most vendors will default to recommending, for obvious reasons — it's also the one with the highest ongoing licensing and hardware-refresh costs, and includes the parts of Windows 11 that get the most complaints: bundled AI features, ads in the OS, telemetry.</p>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-yes">Where we can help most</span>
+        <h3>Migrate some or all machines to Linux and open source software</h3>
+        <p>For a large share of everyday office work — browsing, email, document editing, video calls — a Linux desktop with open source applications can replace Windows entirely, on hardware that's several years old, at no licensing cost. It's not the right fit for every machine or every piece of specialized software, which is exactly what a readiness consult is for.</p>
+      </div>
+      <div class="fit-cell full-width">
+        <span class="fit-tag tag-neutral">Most common outcome</span>
+        <h3>A mix: some machines move, some stay on Windows, and you get outside help for the parts you can't do yourself</h3>
+        <p>Very few small businesses land on one clean answer. A typical outcome is a handful of machines running specialized Windows-only software staying put (properly hardened and managed), general-purpose machines migrating to Linux, and a plan for whoever needs to physically touch hardware on-site — which is where good, honestly-priced local IT help matters, and where a vetting review before you sign anything can save real money.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- THE HONEST TALK -->
+  <section id="honest" class="alt">
+    <div class="section-inner">
+    <p class="section-label">Straight talk on Linux specifically</p>
+    <h2>Linux isn't for everyone. Here's exactly who it's for.</h2>
+    <p class="section-intro">If the migration path above looks like a fit, this is where it gets specific. No pitch — a plain breakdown of what moves cleanly, what needs a workaround, and what should just stay on Windows.</p>
+
+    <div class="fit-grid">
+      <div class="fit-cell">
+        <span class="fit-tag tag-yes">Great fit</span>
+        <h3>Linux works well here</h3>
+        <ul>
+          <li>Email, calendars, video calls</li>
+          <li>Web browsing and cloud apps</li>
+          <li>Microsoft 365 (via browser)</li>
+          <li>Word processing &amp; spreadsheets</li>
+          <li>PDF work, basic printing</li>
+          <li>General office administration</li>
+        </ul>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-maybe">Usually workable</span>
+        <h3>Needs a cloud swap first</h3>
+        <ul>
+          <li>QuickBooks Desktop → QuickBooks Online</li>
+          <li>Other Windows accounting software</li>
+          <li>Basic point-of-sale systems</li>
+          <li>Older proprietary scheduling tools</li>
+        </ul>
+        <p style="margin-top: 0.75rem; font-size: 0.82rem;">We'll walk through the migration and the alternatives on a call — often you'll save money on software licensing too.</p>
+      </div>
+      <div class="fit-cell full-width">
+        <span class="fit-tag tag-windows">Keep Windows</span>
+        <h3>Some machines need to stay on Windows — and that's fine.</h3>
+        <p>Industry-specific software — certain medical records systems, legal case management, CAD tools, specialized production equipment drivers — often has no viable Linux alternative. Part of a readiness consult is identifying those machines upfront and being plain about it, rather than pretending everything can move.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- DESKTOP ENVIRONMENTS (brief) -->
+  <section id="desktop">
+    <div class="section-inner">
+    <p class="section-label">The user experience</p>
+    <h2>It can look and feel like Windows. That's deliberate.</h2>
+    <p class="section-intro" style="margin-bottom: 0;">The biggest objection to Linux is usually "my staff will hate it." In practice, Linux desktops can be configured with a familiar taskbar, Start-menu-style launcher, and system tray — close enough to Windows that most staff adjust within a day or two. Which specific setup fits best depends on your hardware and team, and that's part of what a readiness consult sorts out — not something to figure out in advance.</p>
+    </div>
+  </section>
+
+  <!-- IN-SOURCING VS OUTSOURCING / PROVIDER VETTING -->
+  <section id="hiring-help" class="alt">
+    <div class="section-inner">
+    <p class="section-label">When you need hands-on help</p>
+    <h2>Doing it yourself, hiring outside help, or something in between.</h2>
+    <p class="section-intro">Migrations and ongoing IT support often need someone physically at your location — swapping drives, running cable, fixing a printer. We don't do on-site work outside our own local area, but we can help you figure out whether you need it at all, and how to avoid the ways businesses commonly get overcharged or locked in when they hire a managed service provider (an outside firm that handles your IT on an ongoing basis, usually called an MSP for short).</p>
+
+    <div class="fit-grid">
+      <div class="fit-cell">
+        <span class="fit-tag tag-yes">DIY often works when...</span>
+        <h3>Your team can handle it in-house</h3>
+        <ul>
+          <li>You have at least one comfortable, patient tech-user on staff</li>
+          <li>Machine count is small (roughly under 10)</li>
+          <li>No specialized on-site networking or server work involved</li>
+          <li>You can tolerate a slower, self-paced rollout</li>
+        </ul>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-windows">Outside help makes sense when...</span>
+        <h3>You need hands physically on the hardware</h3>
+        <ul>
+          <li>Server, networking, or wiring work on-site</li>
+          <li>Larger fleets needing coordinated rollout</li>
+          <li>No internal staff with the time or comfort level</li>
+          <li>Ongoing monitoring/support you don't want to manage yourself</li>
+        </ul>
+      </div>
+      <div class="fit-cell full-width">
+        <span class="fit-tag tag-no">Common ways provider contracts go wrong</span>
+        <p>None of these mean a provider is acting in bad faith by default — but each is worth reading closely before signing:</p>
+        <ul>
+          <li>Multi-year contracts with automatic renewal clauses and steep early-termination fees</li>
+          <li>Vague per-device or per-user pricing that balloons once you're a few months in</li>
+          <li>Bundled "security" or "compliance" add-ons priced well above their actual cost</li>
+          <li>Provider retains sole admin access to your accounts, domains, or backups — making it hard to leave even if you want to</li>
+          <li>No clearly defined service-level agreement (response time, scope of what's covered, what counts as an extra billable incident)</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section id="values">
+    <div class="section-inner">
+    <p class="section-label">The bigger picture</p>
+    <h2>Independent advice, and one less reason to distrust it.</h2>
+    <p class="section-intro">Two things worth being upfront about, since one is about how this advice is structured and the other is about the environment.</p>
+
+    <div class="values-grid">
+      <div class="values-card featured">
+        <span class="values-icon">🤝</span>
+        <h3>No commissions, no kickbacks.</h3>
+        <p>We don't take referral fees, commissions, or affiliate payouts from any IT provider, hardware vendor, or software company. If we tell you a particular provider's quote looks fair, or that a piece of software is overpriced for what it does, that's the only reason we said it.</p>
+        <p>You're paying for the time and the read on your situation — not for a sales pitch dressed up as advice.</p>
+      </div>
+      <div class="values-card">
+        <span class="values-icon">♻️</span>
+        <h3>Keep hardware out of the landfill.</h3>
+        <p>Electronic waste is one of the fastest-growing waste streams in the world. When Microsoft declares a four or five year old machine "incompatible" with Windows 11, the implicit pressure is to throw it away and buy something new — even though most of it still works fine.</p>
+        <p>Extending the working life of existing hardware by even three to five years with Linux keeps those machines productive and reduces the environmental cost of manufacturing replacements. It's one of the more straightforward green IT decisions a small business can make.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services-detail" class="alt">
+    <div class="section-inner">
+    <p class="section-label">What this covers</p>
+    <h2>Remote advisory. Clear, flat pricing.</h2>
+    <p class="section-intro">Everything here is done over video call, entirely remote. No retainers, no on-site visits, no surprise fees — you know the cost before you book.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01 /</div>
+        <h3>Free Intro Call</h3>
+        <p>A quick 15–20 minute call to hear about your situation and tell you honestly whether a paid consult would actually be useful, or whether your best move is something simpler. No obligation either way.</p>
+        <div class="price-note">Free · 15–20 min</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02 /</div>
+        <h3>Migration Readiness Consult</h3>
+        <p>A working session covering your machines, your critical software, and your team's comfort level, followed by a written summary: what can move to Linux, what needs a cloud-software swap first, and what should stay on Windows.</p>
+        <div class="price-note">$125–$175 flat · 45–60 min + written summary</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03 /</div>
+        <h3>IT Provider Vetting Review</h3>
+        <p>Send over a quote or contract you're considering, or a shortlist of candidate providers. We'll go through it line by line and flag anything that looks like a lock-in clause, an inflated add-on, or an unclear service agreement — from someone who isn't trying to win the bid themselves.</p>
+        <div class="price-note">$150–$250 flat · bundled free with a booked Readiness Consult</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04 /</div>
+        <h3>Written Report Add-On</h3>
+        <p>A clean, shareable PDF version of either consult's findings — useful if you need to bring a partner, board, or co-owner into the decision.</p>
+        <div class="price-note">+$50 · either service</div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="process">
+    <div class="section-inner">
+    <p class="section-label">The process</p>
+    <h2>How it works, start to finish.</h2>
+    <p class="section-intro">Entirely remote. No jargon, no surprises.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Book a free 15–20 minute intro call</h3>
+          <p>Tell us about your business, how many computers you have, and what software your team relies on day-to-day. We'll tell you on the call whether a paid consult is worth booking — if it's clearly not a fit, we'll say so and save you the cost.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>We do a paid remote working session</h3>
+          <p>Video call, screen-share friendly. We go through your machines, your must-keep software, and your team's tech comfort level. You get a written summary afterward: a clear breakdown of what can move to Linux, what needs a workaround, and what stays on Windows.</p>
+          <span class="step-note">No commitment to proceed</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>You decide what to do with that information</h3>
+          <p>Handle the migration in-house, hire a local provider (with a vetting review if you want a second set of eyes on the contract first), or take the report and make your own call. The consult is useful regardless of what you do next.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Optional: IT Provider Vetting Review before you sign anything</h3>
+          <p>If you're bringing in outside help for on-site work, send over the quote or contract before you commit. Flagging a bad clause before signing is worth a lot more than trying to get out of it later.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section class="cta alt" id="contact">
+    <div class="section-inner">
+    <h2>Book a Free Intro Call</h2>
+    <p>No pitch, no pressure. Tell us a bit about your setup and we'll have an honest conversation about whether a Linux and open source migration or an IT provider vetting review is the right call — or whether your situation doesn't need either.</p>
+
+    <div class="contact-detail"><span>Format</span>Remote — video call, worldwide time zones welcome</div>
+    <div class="contact-detail"><span>Response time</span>Within 1–2 business days</div>
+    <div class="contact-detail"><span>Email</span>Available on request — send a message below</div>
+    <div class="contact-detail"><span>Based in</span>Eastern Time (US)</div>
+
+    <form action="https://formspree.io/f/mwlegnae" method="POST" onsubmit="handleSubmit(event)">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="text" name="business" placeholder="Business or organization name">
+      <input type="email" name="email" placeholder="Email address" required>
+      <select name="service">
+        <option value="" disabled selected>Which service are you interested in?</option>
+        <option>Migration Readiness Consult</option>
+        <option>IT Provider Vetting Review</option>
+        <option>Not sure yet — just want to talk</option>
+      </select>
+      <select name="team_size">
+        <option value="" disabled selected>How many computers?</option>
+        <option>1 – 3 machines</option>
+        <option>4 – 10 machines</option>
+        <option>11 – 25 machines</option>
+        <option>25+ machines</option>
+      </select>
+      <textarea name="message" placeholder="Briefly describe your situation — what software you rely on, or what's making you consider a change."></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="articles.html">Articles</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="copyright">© 2026 GCA Technologies</div>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button');
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      btn.textContent = 'Message sent — we\'ll be in touch.';
+      btn.style.background = '#2a5c2a';
+      btn.disabled = true;
+    } else {
+      btn.textContent = 'Something went wrong — please email directly.';
+    }
+  }).catch(() => {
+    btn.textContent = 'Something went wrong — please email directly.';
+  });
+}
+</script>
+
+</body>
+</html>

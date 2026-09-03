@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Use Assessment for Small Business — Realistic ROI, No Hype | GCA Technologies</title>
+<meta name="description" content="Independent, remote AI use assessments for small businesses and nonprofits. Find out which AI tools actually pay off for your operation — and which ones aren't worth it yet — from a vendor-neutral advisor with no tool commissions.">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0d0d0f;
+    --bg-alt: #16161a;
+    --text: #e7e7ea;
+    --muted: #9a9aa2;
+    --accent: #2ecc71;
+    --accent-dark: #25a25c;
+    --accent-light: #e2a82b;
+    --accent-faded: #372d1c;
+    --number-color: #372d1c;
+    --border: #26262c;
+    --font: 'General Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, "Cascadia Code", "SF Mono", Consolas, monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 100; background: var(--bg); border-bottom: 1px solid var(--border); padding: 1.1rem 0; }
+  .nav-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+  .nav-logo { font-family: var(--font); font-weight: 700; font-size: 1rem; letter-spacing: -0.01em; color: var(--text); text-decoration: none; }
+  .nav-logo:hover { text-decoration: none; color: var(--text); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 500; color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--text); }
+
+  main { display: block; }
+  .section-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
+
+  /* HERO */
+  .hero-block { background: var(--bg); }
+  .hero { padding-top: 5.5rem; padding-bottom: 3rem; max-width: 1080px; }
+  .hero-eyebrow { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
+  .hero h1 { font-family: var(--font); font-weight: 700; font-size: 2.5rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin-bottom: 1.5rem; }
+  .hero p { font-size: 1.05rem; color: var(--muted); line-height: 1.75; margin-bottom: 2rem; }
+  .hero-actions { display: flex; justify-content: flex-start; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary, .btn-secondary { font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; display: inline-block; border: none; cursor: pointer; }
+  .btn-primary { background: var(--accent); color: #0d0d0f; }
+  .btn-primary:hover { background: var(--accent-dark); text-decoration: none; }
+  .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-secondary:hover { border-color: var(--muted); text-decoration: none; }
+
+  /* STAT STRIP */
+  .stat-strip { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--bg-alt); }
+  .stat-strip-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stat-cell { padding: 1.75rem 1.5rem 1.75rem 0; border-right: 1px solid var(--border); }
+  .stat-cell:last-child { border-right: none; padding-left: 1.5rem; }
+  .stat-cell:not(:first-child) { padding-left: 1.5rem; }
+  .stat-num { font-family: var(--font); font-weight: 700; font-size: 1.5rem; color: var(--accent-light); margin-bottom: 0.35rem; }
+  .stat-label { font-size: 0.85rem; color: var(--muted); line-height: 1.5; }
+
+  /* SECTIONS */
+  section { padding: 3.5rem 0; border-top: 1px solid var(--border); background: var(--bg); }
+  section.alt { background: var(--bg-alt); }
+  .section-label { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.9rem; }
+  section h2 { font-family: var(--font); font-weight: 700; font-size: 1.6rem; letter-spacing: -0.01em; color: var(--text); margin-bottom: 1.1rem; }
+  .section-intro { font-size: 1rem; color: var(--muted); line-height: 1.8; max-width: 680px; margin-bottom: 2rem; }
+  section p { font-size: 1rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.1rem; }
+  section p strong { color: var(--text); font-weight: 600; }
+  section a.inline-link { color: var(--accent); text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 3px; }
+  section a.inline-link:hover { text-decoration-color: var(--accent); }
+
+  /* FIT-TAG GRIDS */
+  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .fit-cell { background: var(--bg-alt); padding: 1.75rem; }
+  section.alt .fit-cell { background: var(--bg); }
+  .fit-cell.full-width { grid-column: 1 / -1; }
+  .fit-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.28rem 0.6rem; border-radius: 3px; margin-bottom: 0.85rem; }
+  .tag-yes { background: rgba(46, 204, 113, 0.15); color: var(--accent); }
+  .tag-maybe { background: rgba(226, 168, 43, 0.15); color: #e2a82b; }
+  .tag-no { background: rgba(226, 102, 43, 0.15); color: #e2662b; }
+  .tag-windows { background: rgba(91, 155, 213, 0.15); color: #5b9bd5; }
+  .tag-neutral { background: rgba(154, 154, 162, 0.15); color: var(--muted); }
+  .fit-cell h3 { font-family: var(--font); font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.6rem; line-height: 1.35; }
+  .fit-cell p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; margin-bottom: 0; }
+  .fit-cell ul { list-style: none; }
+  .fit-cell ul li { font-size: 0.9rem; color: var(--muted); line-height: 1.7; padding-left: 1.1rem; position: relative; }
+  .fit-cell ul li::before { content: "—"; position: absolute; left: 0; color: var(--accent-faded); }
+
+  /* VALUES */
+  .values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .values-card { background: var(--bg-alt); padding: 2rem; }
+  section.alt .values-card { background: var(--bg); }
+  .values-card.featured { background: var(--accent); }
+  .values-card.featured h3, .values-card.featured p { color: #0d0d0f; }
+  .values-icon { font-size: 1.75rem; display: block; margin-bottom: 0.85rem; }
+  .values-card h3 { font-family: var(--font); font-size: 1.25rem; color: var(--text); margin-bottom: 0.65rem; }
+  .values-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.75; margin-bottom: 0; }
+  .values-card p + p { margin-top: 0.75rem; }
+
+  /* SERVICES / PRICING */
+  .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+  .service-card { background: var(--bg-alt); padding: 1.75rem; display: flex; flex-direction: column; }
+  section.alt .service-card { background: var(--bg); }
+  .service-card.featured { background: var(--accent); }
+  .service-card.featured h3, .service-card.featured p, .service-card.featured .price-note { color: #0d0d0f; }
+  .service-card.featured .service-num { color: rgba(13,13,15,0.5); }
+  .service-num { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-light); margin-bottom: 1.1rem; }
+  .service-card h3 { font-family: var(--font); font-size: 1.15rem; color: var(--text); margin-bottom: 0.65rem; }
+  .service-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.1rem; }
+  .price-note { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent); border-top: 1px solid var(--border); padding-top: 0.9rem; margin-top: auto; }
+  .service-card.featured .price-note { border-color: rgba(13,13,15,0.2); }
+
+  /* STEPS */
+  .steps { display: flex; flex-direction: column; }
+  .step { display: grid; grid-template-columns: 56px 1fr; gap: 1.25rem; padding: 1.75rem 0; border-top: 1px solid var(--border); }
+  .step:first-child { border-top: none; padding-top: 0; }
+  .step-num { font-family: var(--font); font-weight: 700; font-size: 2rem; color: var(--number-color); }
+  .step h3 { font-family: var(--font); font-size: 1.05rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+  .step p { font-size: 0.92rem; color: var(--muted); line-height: 1.75; margin-bottom: 0; }
+  .step-note { display: inline-block; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); margin-top: 0.5rem; }
+
+  /* CONTACT */
+  .cta { padding: 4rem 0; border-top: 1px solid var(--border); }
+  .cta h2 { font-size: 1.9rem; margin-bottom: 1rem; }
+  .cta p { max-width: 560px; margin-bottom: 1.75rem; }
+  .contact-detail { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text); padding: 0.6rem 0; border-top: 1px solid var(--border); max-width: 560px; }
+  .contact-detail:last-of-type { border-bottom: 1px solid var(--border); margin-bottom: 1.75rem; }
+  .contact-detail span { color: var(--muted); margin-right: 0.75rem; display: inline-block; min-width: 110px; }
+  .cta form { max-width: 560px; display: flex; flex-direction: column; gap: 1rem; }
+  .cta form input, .cta form textarea, .cta form select {
+    width: 100%; padding: 0.75rem 1rem; background: var(--bg); border: 1px solid var(--border); border-radius: 4px;
+    font-family: var(--font); font-size: 0.95rem; color: var(--text); outline: none; transition: border-color 0.2s; -webkit-appearance: none;
+  }
+  section.alt .cta form input, section.alt .cta form textarea, section.alt .cta form select { background: var(--bg-alt); }
+  .cta form input:focus, .cta form textarea:focus, .cta form select:focus { border-color: var(--accent); }
+  .cta form textarea { resize: vertical; min-height: 110px; }
+  .cta form ::placeholder { color: var(--muted); }
+  .cta form select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239a9aa2' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; cursor: pointer;
+  }
+  .cta form button { align-self: flex-start; font-family: var(--font-mono); border: none; cursor: pointer; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 2rem 0; }
+  .footer-inner { max-width: 1080px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); }
+  .footer-links a:hover { color: var(--text); }
+  footer .copyright { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); }
+
+  @media (max-width: 720px) {
+    nav { padding: 1rem 0; }
+    .nav-inner { padding: 0 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .section-inner { padding: 0 1.25rem; }
+    .stat-strip-inner { grid-template-columns: 1fr; padding: 0 1.25rem; }
+    .stat-cell { border-right: none; border-bottom: 1px solid var(--border); padding: 1.25rem 0 !important; }
+    .stat-cell:last-child { border-bottom: none; }
+    .hero { padding-top: 3.5rem; padding-bottom: 2.5rem; }
+    .hero h1 { font-size: 2rem; }
+    .fit-grid, .values-grid, .services-grid { grid-template-columns: 1fr; }
+    footer { padding: 1.5rem 0; }
+    .footer-inner { padding: 0 1.25rem; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo.png"></a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#articles">Articles</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero-block">
+    <div class="section-inner hero">
+      <p class="hero-eyebrow">Advisory · AI Use Assessment for Small Business</p>
+      <h1>Everyone's talking about AI. Almost none of it is about whether it actually pays off for a business your size.</h1>
+      <p>You don't need another sales pitch dressed up as a webinar, and you don't need to ignore the topic out of fatigue either. We help small businesses and nonprofits — anywhere, entirely remote — figure out which AI tools would genuinely save time or money in your specific operation, which ones are premature for you right now, and how to avoid the data-privacy traps that come with feeding your business's information into the wrong tool.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book a Free Intro Call</a>
+        <a href="#options" class="btn-secondary">See the honest breakdown</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- STAT STRIP -->
+  <div class="stat-strip">
+    <div class="stat-strip-inner">
+      <div class="stat-cell">
+        <div class="stat-num">No hype</div>
+        <div class="stat-label">Every recommendation is judged against real time saved or cost avoided — not novelty</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">No commissions</div>
+        <div class="stat-label">We don't get paid by any AI vendor to recommend their tool, so there's no reason to oversell one</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">Task-level</div>
+        <div class="stat-label">Assessed by specific workflow, not a blanket "yes, adopt AI" or "no, avoid it" verdict</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTIONS OVERVIEW -->
+  <section id="options">
+    <div class="section-inner">
+    <p class="section-label">Start here</p>
+    <h2>Where AI tools actually help a small business right now — and where they don't, yet.</h2>
+    <p class="section-intro">"AI" covers wildly different things: a writing assistant, a customer-service chatbot, a document-automation pipeline, a fully autonomous agent. They don't have remotely the same cost, setup effort, or payoff. This is a plain-language rundown by category, including where the juice genuinely isn't worth the squeeze yet.</p>
+
+    <div class="fit-grid">
+      <div class="fit-cell">
+        <span class="fit-tag tag-yes">Good fit today</span>
+        <h3>Writing, editing, and everyday communication</h3>
+        <p>Drafting emails, cleaning up written documents, summarizing long threads, or getting a first pass at a proposal. Low setup cost, immediate time savings, low risk if a human still reviews the output before it goes out the door.</p>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-maybe">Workable, with real setup effort</span>
+        <h3>Customer-facing chatbots and support automation</h3>
+        <p>Can genuinely cut response time and staff workload, but only pays off once it's actually configured around your specific products, policies, and edge cases. A chatbot that gives wrong answers to customers does more damage than having no chatbot at all — this is the category where sloppy setup costs the most.</p>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-maybe">Good ROI at volume</span>
+        <h3>Document processing and data entry automation</h3>
+        <p>Pulling structured data out of invoices, forms, or receipts at scale can pay for itself quickly — but only if you're processing enough volume to justify the setup. For a handful of documents a week, the manual process is often still cheaper than the tooling and oversight it takes to automate it properly.</p>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-no">Usually premature</span>
+        <h3>"Replace a role with AI" broad automation</h3>
+        <p>The most heavily marketed promise and the least reliable one for a business your size. These systems generally need ongoing technical oversight, guardrails, and error-correction that a small operation isn't staffed to provide — the hidden cost is the maintenance, not the subscription.</p>
+      </div>
+      <div class="fit-cell full-width">
+        <span class="fit-tag tag-neutral">Most common outcome</span>
+        <h3>A short list of specific tasks worth automating now, and a longer list worth revisiting in a year</h3>
+        <p>Almost no small business needs an "AI strategy." Most need two or three well-chosen tools solving specific, recurring bottlenecks — and an honest sense of which flashier options to skip for now. That short list is the actual deliverable of an assessment.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- THE HONEST TALK -->
+  <section id="honest" class="alt">
+    <div class="section-inner">
+    <p class="section-label">The part most AI pitches skip</p>
+    <h2>What happens to your data the moment you paste it into an AI tool.</h2>
+    <p class="section-intro">Before picking a tool, it's worth knowing what you're agreeing to. This isn't about being anti-AI — it's about not signing away customer or business data without realizing it.</p>
+
+    <div class="fit-grid">
+      <div class="fit-cell">
+        <span class="fit-tag tag-yes">Lower risk</span>
+        <h3>Business-tier tools with a written no-training data policy</h3>
+        <ul>
+          <li>Vendor contractually excludes your data from model training</li>
+          <li>Clear data-retention and deletion terms</li>
+          <li>Admin controls over who on your team can use it</li>
+          <li>Reasonable fit for most day-to-day business use</li>
+        </ul>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-maybe">Read the terms first</span>
+        <h3>Free consumer versions of the same tools</h3>
+        <ul>
+          <li>Often reserve the right to use your input for training</li>
+          <li>Fine for general drafting with no sensitive details</li>
+          <li>Not the place to paste customer records, financials, or contracts</li>
+        </ul>
+        <p style="margin-top: 0.75rem; font-size: 0.82rem;">A one-time policy check per tool avoids most of the risk here — this is a five-minute part of an assessment, not a separate ordeal.</p>
+      </div>
+      <div class="fit-cell full-width">
+        <span class="fit-tag tag-no">Avoid for sensitive data</span>
+        <h3>Pasting client records, health, financial, or legal information into any general-purpose chat tool</h3>
+        <p>Even with a good data policy, regulated data (health records, financial account details, anything covered by industry-specific privacy law) generally shouldn't go into a general AI tool without a specific compliance-grade agreement in place. If this applies to your business, it's worth a dedicated privacy and cybersecurity conversation before any AI tooling decision — a natural add-on to an assessment, not a prerequisite for having one.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- CHOOSING / VETTING AN AI TOOL -->
+  <section id="hiring-help">
+    <div class="section-inner">
+    <p class="section-label">Choosing a tool or vendor</p>
+    <h2>Off-the-shelf tool, or something custom-built? And what to check before you sign up.</h2>
+    <p class="section-intro">Once you know which task is worth automating, the next decision is what to actually buy or build — and AI vendor contracts have their own set of traps, separate from the usual software-subscription fine print.</p>
+
+    <div class="fit-grid">
+      <div class="fit-cell">
+        <span class="fit-tag tag-yes">Off-the-shelf usually wins when...</span>
+        <h3>Your use case is common</h3>
+        <ul>
+          <li>Writing, summarizing, basic customer support</li>
+          <li>A mainstream tool already covers your workflow</li>
+          <li>You want to start now, not in three months</li>
+          <li>Low budget for setup and no in-house technical staff</li>
+        </ul>
+      </div>
+      <div class="fit-cell">
+        <span class="fit-tag tag-windows">Custom-built is worth considering when...</span>
+        <h3>Your workflow is genuinely unusual</h3>
+        <ul>
+          <li>No off-the-shelf tool fits your specific process</li>
+          <li>High enough volume to justify setup and maintenance cost</li>
+          <li>You have (or will hire) someone to maintain it long-term</li>
+          <li>The task is stable enough not to need constant rebuilding</li>
+        </ul>
+      </div>
+      <div class="fit-cell full-width">
+        <span class="fit-tag tag-no">Common ways AI vendor contracts go wrong</span>
+        <p>Worth reading closely before you commit budget or business data to any AI vendor:</p>
+        <ul>
+          <li>Unclear terms on whether your input data is used to train the vendor's models</li>
+          <li>Per-seat or usage-based pricing that scales unpredictably as your team grows</li>
+          <li>No clear data export or deletion path if you decide to switch tools later</li>
+          <li>Marketing that implies capabilities the actual product doesn't reliably deliver</li>
+          <li>Long annual contracts for a category of tool that's still changing every few months</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section id="values" class="alt">
+    <div class="section-inner">
+    <p class="section-label">The bigger picture</p>
+    <h2>Independent advice, and one less reason to distrust it.</h2>
+    <p class="section-intro">Two things worth being upfront about, since one is about how this advice is structured and the other is about the environment.</p>
+
+    <div class="values-grid">
+      <div class="values-card">
+        <span class="values-icon">🤝</span>
+        <h3>No commissions, no kickbacks.</h3>
+        <p>We don't take referral fees or affiliate payouts from any AI vendor, tool, or platform. If a mainstream tool is genuinely the right call for your task, we'll say so — the same goes if the honest answer is "skip AI here entirely."</p>
+        <p>You're paying for the time and the judgment call — not for a sales pitch wearing an advisory hat.</p>
+      </div>
+      <div class="values-card">
+        <span class="values-icon">⚖️</span>
+        <h3>Willing to say "not yet."</h3>
+        <p>Plenty of consultants make more money the more tools they get you to adopt. An honest assessment sometimes concludes that the right move this year is doing nothing — and revisiting it once a tool matures, your volume grows, or the pricing changes.</p>
+        <p>Running AI tools also has a real compute and energy cost behind the scenes, which is one more reason "adopt it everywhere" isn't automatically the responsible default.</p>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services-detail">
+    <div class="section-inner">
+    <p class="section-label">What this covers</p>
+    <h2>Remote advisory. Clear, flat pricing.</h2>
+    <p class="section-intro">Everything here is done over video call, entirely remote. No retainers, no on-site visits, no surprise fees — you know the cost before you book.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01 /</div>
+        <h3>Free Intro Call</h3>
+        <p>A quick 15–20 minute call to hear what you're considering and tell you honestly whether a paid assessment would actually be useful, or whether the answer is simpler than you think. No obligation either way.</p>
+        <div class="price-note">Free · 15–20 min</div>
+      </div>
+      <div class="service-card featured">
+        <div class="service-num">02 /</div>
+        <h3>AI Opportunity Assessment</h3>
+        <p>A working session covering your day-to-day operations and biggest time-sinks, followed by a written summary: two or three specific tasks worth automating now, realistic tools for each, and what's not worth pursuing yet.</p>
+        <div class="price-note">$125–$175 flat · 45–60 min + written summary</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03 /</div>
+        <h3>AI Tool &amp; Vendor Vetting Review</h3>
+        <p>Send over a contract or shortlist of AI tools you're considering. We'll review data-handling terms, pricing structure, and lock-in risk, and flag anything that looks like inflated hype or an unclear exit path.</p>
+        <div class="price-note">$150–$250 flat · bundled free with a booked Opportunity Assessment</div>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04 /</div>
+        <h3>Written Report Add-On</h3>
+        <p>A clean, shareable PDF version of either service's findings — useful if you need to bring a partner, board, or co-owner into the decision.</p>
+        <div class="price-note">+$50 · either service</div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="process" class="alt">
+    <div class="section-inner">
+    <p class="section-label">The process</p>
+    <h2>How it works, start to finish.</h2>
+    <p class="section-intro">Entirely remote. No jargon, no surprises.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h3>Book a free 15–20 minute intro call</h3>
+          <p>Tell us what's prompting the interest in AI tools, and what your day-to-day operations look like. We'll tell you on the call whether a paid assessment is worth booking — if it's clearly not, we'll say so and save you the cost.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h3>We do a paid remote working session</h3>
+          <p>Video call, screen-share friendly. We go through your recurring tasks and biggest time-sinks. You get a written summary afterward: a short list of tasks worth automating now, realistic tool options for each, and what's not worth chasing yet.</p>
+          <span class="step-note">No commitment to proceed</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h3>You decide what to do with that information</h3>
+          <p>Set up the recommended tools yourself, bring in outside help, or just file the report away for when your volume or budget changes. The assessment is useful regardless of what you do next.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h3>Optional: Tool &amp; Vendor Vetting Review before you sign anything</h3>
+          <p>If you're evaluating a specific AI vendor or contract, send it over before you commit. Flagging a bad data-handling clause or pricing trap before signing is worth a lot more than trying to unwind it later.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section class="cta" id="contact">
+    <div class="section-inner">
+    <h2>Let's figure out if AI actually makes sense for you.</h2>
+    <p>No pitch, no pressure. Tell us a bit about your operation and we'll have an honest conversation about whether an AI Opportunity Assessment or a Tool Vetting Review is the right call — or whether your situation doesn't need either yet.</p>
+
+    <div class="contact-detail"><span>Format</span>Remote — video call, worldwide time zones welcome</div>
+    <div class="contact-detail"><span>Response time</span>Within 1–2 business days</div>
+    <div class="contact-detail"><span>Email</span>Available on request — send a message below</div>
+    <div class="contact-detail"><span>Based in</span>Eastern Time (US)</div>
+
+    <form action="https://formspree.io/f/mwlegnae" method="POST" onsubmit="handleSubmit(event)">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="text" name="business" placeholder="Business or organization name">
+      <input type="email" name="email" placeholder="Email address" required>
+      <select name="service">
+        <option value="" disabled selected>Which service are you interested in?</option>
+        <option>AI Opportunity Assessment</option>
+        <option>AI Tool &amp; Vendor Vetting Review</option>
+        <option>Not sure yet — just want to talk</option>
+      </select>
+      <select name="team_size">
+        <option value="" disabled selected>Team size?</option>
+        <option>Just me / 1–2 people</option>
+        <option>3 – 10 people</option>
+        <option>11 – 25 people</option>
+        <option>25+ people</option>
+      </select>
+      <textarea name="message" placeholder="Briefly describe what's prompting the interest in AI tools, or what's currently eating up the most time."></textarea>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="articles.html">Articles</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="copyright">© 2026 GCA Technologies</div>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button');
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      btn.textContent = 'Message sent — we\'ll be in touch.';
+      btn.style.background = '#2a5c2a';
+      btn.disabled = true;
+    } else {
+      btn.textContent = 'Something went wrong — please email directly.';
+    }
+  }).catch(() => {
+    btn.textContent = 'Something went wrong — please email directly.';
+  });
+}
+</script>
+
+</body>
+</html>
